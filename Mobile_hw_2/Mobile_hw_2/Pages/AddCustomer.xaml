@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile_hw_2.Pages.AddCustomer"
+             Title="Add Customer"
+             Background="lightgreen">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="StartAndExpand" Padding="5">
+            <Entry x:Name="_Name" Placeholder="Name and Surname" Keyboard="Default" />
+            <Label Text="Date Of Birth"></Label>
+            <DatePicker x:Name="_Date"/>
+            <Entry x:Name="_Credit" Placeholder="Credit" Keyboard="Numeric" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Add" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"/>
+                <Button Text="Reset" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked_1"/>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

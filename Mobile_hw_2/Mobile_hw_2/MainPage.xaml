@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="Mobile_hw_2.MainPage"
+             Title="Bank Account Info"
+             Background="lightgreen">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add Customer"
+                     IconImageSource="add.png"
+                     Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ListView x:Name="customerList"
+              HasUnevenRows="true"
+              ItemTapped="customerList_ItemTapped"
+              IsPullToRefreshEnabled="True"
+              >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell xct:TouchEffect.LongPressCommand="{Binding TouchCommand}">
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Id}"/>
+                            <Label Text="{Binding Name}"/>
+                        </StackLayout>
+                        <Label Text="{Binding Dob}"/>
+                        <Label Text="{Binding Credit}" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

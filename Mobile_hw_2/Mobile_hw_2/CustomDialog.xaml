@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 x:Class="Mobile_hw_2.CustomDialog"                
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 >
+    <StackLayout
+        VerticalOptions="Center" 
+        HorizontalOptions="Center" 
+        Padding="20, 20, 20, 20"
+        BackgroundColor="White">
+        <Label Text="Update Customer" TextColor="DeepSkyBlue" FontSize="Large"/>
+        <Entry x:Name="_Name" Placeholder="Name and Surname" Keyboard="Default" />
+        <Label Text="Date Of Birth"></Label>
+        <DatePicker x:Name="_Date"/>
+        <Entry x:Name="_Credit" Placeholder="Credit" Keyboard="Numeric" />
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Delete" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"/>
+            <Button Text="Update" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked_1"/>
+        </StackLayout>
+    </StackLayout>
+    
+</pages:PopupPage>
